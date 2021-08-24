@@ -1,0 +1,43 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "tap test/**/utils.test.js",
+    "start": "node server.js",
+    "dev": "fastify start -w -l  trace -P app.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-redis": "^6.0.0",
+    "desm": "^1.1.0",
+    "fastify": "^3.18.1",
+    "fastify-autoload": "^3.8.0",
+    "fastify-cli": "^2.13.0",
+    "fastify-cookie": "^5.3.1",
+    "fastify-cors": "^6.0.1",
+    "fastify-env": "^2.1.1",
+    "fastify-helmet": "^5.3.1",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.1",
+    "fastify-session": "^5.2.1",
+    "fluent-json-schema": "^3.0.0",
+    "querystring": "^0.2.1",
+    "spotify-web-api-node": "^5.0.2",
+    "woke-dyno": "^0.0.4"
+  },
+  "engines": {
+    "node": "16.4.1",
+    "npm": "7.20.0"
+  },
+  "devDependencies": {
+    "tap": "15.0.9"
+  }
+}
