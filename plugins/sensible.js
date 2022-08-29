@@ -1,7 +1,7 @@
 'use strict';
 
 import fp from 'fastify-plugin';
-import Sensible from 'fastify-sensible';
+import Sensible from '@fastify/sensible';
 /**
  * This plugins adds some utilities to handle http errors
  *

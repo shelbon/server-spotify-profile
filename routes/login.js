@@ -1,4 +1,3 @@
-import querystring from 'querystring';
 import SpotifyWebApi from 'spotify-web-api-node';
 import { generateRandomString } from '../utils.js';
 
@@ -33,9 +32,9 @@ export default async function (fastify, opts) {
 
     if (state === null || state !== storedState) {
       res.redirect(
-        `${referrer}#${querystring.stringify({
+        `${referrer}#${new URLSearchParams({
           error: 'state_mismatch',
-        })}`
+        }).toString()}`
       );
     } else {
       res.clearCookie(process.env.STATE_KEY);
@@ -43,10 +42,10 @@ export default async function (fastify, opts) {
         .authorizationCodeGrant(code)
         .then(function (data) {
           res.redirect(
-            `${referrer}#${querystring.stringify({
+            `${referrer}#${new URLSearchParams({
               access_token: data.body.access_token,
               refresh_token: data.body.refresh_token,
-            })}`
+            }).toString()}`
           );
         })
         .catch((error) => {

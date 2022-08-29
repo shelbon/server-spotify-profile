@@ -1,12 +1,15 @@
 'use strict';
 
 import { join } from 'desm';
-import AutoLoad from 'fastify-autoload';
-import Cookie from 'fastify-cookie';
-import Cors from 'fastify-cors';
-import Env from 'fastify-env';
+import AutoLoad from '@fastify/autoload';
+import Cookie from '@fastify/cookie';
+import Cors from '@fastify/cors';
+import Env from '@fastify/env';
+import lightrun from 'lightrun';
 import { ALLOWED_ORIGIN } from './constants.js';
-
+lightrun.start({
+  lightrunSecret: 'c011f943-383c-4509-81e3-38afdaffcab0',
+});
 export default async function (fastify, opts) {
   const envOption = {
     dotenv: {
