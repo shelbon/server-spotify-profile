@@ -39,7 +39,7 @@
   },
   "engines": {
     "node": "16.4.1",
-    "npm": "7.20.0"
+    "npm": "8.18.0"
   },
   "devDependencies": {
     "tap": "16.3.0"
