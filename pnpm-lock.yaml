@@ -16,7 +16,7 @@ specifiers:
   fastify-cli: 5.3.0
   fastify-plugin: 4.2.1
   fluent-json-schema: 3.1.0
-  lightrun: 1.6.1
+  lightrun: 1.7.0
   spotify-web-api-node: 5.0.2
   tap: 16.3.0
 
@@ -36,7 +36,7 @@ dependencies:
   fastify-cli: 5.3.0
   fastify-plugin: 4.2.1
   fluent-json-schema: 3.1.0
-  lightrun: 1.6.1
+  lightrun: 1.7.0
   spotify-web-api-node: 5.0.2
 
 devDependencies:
@@ -1655,8 +1655,8 @@ packages:
       set-cookie-parser: 2.5.1
     dev: false
 
-  /lightrun/1.6.1:
-    resolution: {integrity: sha512-vk6Tzd2J0XtFgOEuiNJJ00nIl83CrknnPTa+JUOe9ACEQxvzQjG4YUzGqgnwH/Vluywu6DTRUCwFfbfF7cZ4XA==}
+  /lightrun/1.7.0:
+    resolution: {integrity: sha512-UHwCSfjYWJehuHDIehh80kXuso8cTh0t+0mkSBtaecog42gwjsUeAqOAprSDCp4bzbYehhMGhd3gemqDlmQmFQ==}
     engines: {node: '>=10'}
     dependencies:
       '@google-cloud/common': 3.10.0
