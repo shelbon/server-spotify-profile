@@ -36,7 +36,7 @@ The first one contains all the code that should be shared across your entire apl
             root.test.js
 ```
 
-**`Procfile`** heroku's config file
+**`fly.toml`** fly.io config file
 
 **`app.json`** describe web app for heroku deployment
 
@@ -51,8 +51,30 @@ The first one contains all the code that should be shared across your entire apl
 
 ## Requirements
 
-- Create an [heroku account](https://signup.heroku.com/login)
+- Create an [fly.io account](https://fly.io/app/sign-in)
 
-- create spotify application with the [spotify dashboard](https://developer.spotify.com/dashboard),tutorial is [there](https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app).
+- create spotify application with the [spotify dashboard](https://developer.spotify.com/dashboard),tutorial is [there](https://developer.spotify.com/documentation/web-api/quick-start/).
 
-Click on [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+- installing the [Fly Cli](https://fly.io/docs/getting-started/installing-flyctl/)
+
+## Steps
+
+- login with the fly cli
+``` bash
+    flyctl auth login
+```    
+-  launch the app  on fly to configure the app
+ ``` bash
+    flyctl launch
+ ```
+- set the environment variable 
+ ``` bash
+    flyctl secrets set CLIENT_ID=xxx CLIENT_SECRET=xxxxx REDIRECT_URI=xxxx
+    SCOPE="user-read-private user-read-email user-top-read playlist-read-private playlist-read-collaborative user-follow-read"  
+    STATE_KEY=spotify_auth_state
+    FRONTEND_URI=xxx
+ ```
+- deploy the app
+ ``` bash
+    flyctl  deploy
+ ```

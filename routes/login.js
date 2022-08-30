@@ -7,15 +7,9 @@ export default async function (fastify, opts) {
     clientSecret: process.env.CLIENT_SECRET,
     redirectUri: process.env.REDIRECT_URI,
   });
-  let referrer = '';
+  
   fastify.get(
     '/spotify/login/',
-    {
-      preHandler: function (req, res, done) {
-        referrer = req.headers.referer?.split('/login')[0] || ALLOWED_ORIGIN;
-        done();
-      },
-    },
     function (req, res) {
       const scope = process.env.SCOPE.split(' ');
       const state = generateRandomString(16);
@@ -32,7 +26,7 @@ export default async function (fastify, opts) {
 
     if (state === null || state !== storedState) {
       res.redirect(
-        `${referrer}#${new URLSearchParams({
+        `${process.env.FRONTEND_URI}#${new URLSearchParams({
           error: 'state_mismatch',
         }).toString()}`
       );
@@ -42,7 +36,7 @@ export default async function (fastify, opts) {
         .authorizationCodeGrant(code)
         .then(function (data) {
           res.redirect(
-            `${referrer}#${new URLSearchParams({
+            `${process.env.FRONTEND_URI}#${new URLSearchParams({
               access_token: data.body.access_token,
               refresh_token: data.body.refresh_token,
             }).toString()}`
@@ -50,7 +44,7 @@ export default async function (fastify, opts) {
         })
         .catch((error) => {
           fastify.log.error(error.message);
-          res.redirect(referrer);
+          res.redirect(process.env.FRONTEND_URI);
         });
     }
   });
