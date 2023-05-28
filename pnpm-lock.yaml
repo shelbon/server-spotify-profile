@@ -5,7 +5,7 @@ specifiers:
   '@fastify/cookie': 8.1.0
   '@fastify/cors': 8.1.0
   '@fastify/env': 4.1.0
-  '@fastify/helmet': 9.1.0
+  '@fastify/helmet': 10.1.1
   '@fastify/sensible': 5.1.1
   '@fastify/session': 9.0.0
   close-with-grace: 1.1.0
@@ -25,7 +25,7 @@ dependencies:
   '@fastify/cookie': 8.1.0
   '@fastify/cors': 8.1.0
   '@fastify/env': 4.1.0
-  '@fastify/helmet': 9.1.0
+  '@fastify/helmet': 10.1.1
   '@fastify/sensible': 5.1.1
   '@fastify/session': 9.0.0
   close-with-grace: 1.1.0
@@ -307,11 +307,11 @@ packages:
       fast-json-stringify: 5.1.0
     dev: false
 
-  /@fastify/helmet/9.1.0:
-    resolution: {integrity: sha512-wAtu/38t90vH46GdLM6pVi8tM1HZXb6PRdLTNBo9pudSfSw5i5Ogm8Hq1Nx337WjgSOeU6MefaTd+1avlOlCDQ==}
+  /@fastify/helmet/10.1.1:
+    resolution: {integrity: sha512-z9abyIlCHPU25llOTyo3uz8F8TJ+uDqtOC4+38dxODPw8Ro9sTZjbm2U7ZIF0IAv3/E0ke6vbUQ4sB376WuKJA==}
     dependencies:
-      fastify-plugin: 3.0.1
-      helmet: 5.1.1
+      fastify-plugin: 4.2.1
+      helmet: 6.2.0
     dev: false
 
   /@fastify/sensible/5.1.1:
@@ -1354,9 +1354,9 @@ packages:
       type-fest: 0.8.1
     dev: true
 
-  /helmet/5.1.1:
-    resolution: {integrity: sha512-/yX0oVZBggA9cLJh8aw3PPCfedBnbd7J2aowjzsaWwZh7/UFY0nccn/aHAggIgWUFfnykX8GKd3a1pSbrmlcVQ==}
-    engines: {node: '>=12.0.0'}
+  /helmet/6.2.0:
+    resolution: {integrity: sha512-DWlwuXLLqbrIOltR6tFQXShj/+7Cyp0gLi6uAb8qMdFh/YBBFbKSgQ6nbXmScYd8emMctuthmgIa7tUfo9Rtyg==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /help-me/4.0.1:
