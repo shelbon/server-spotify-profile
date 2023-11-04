@@ -15,7 +15,7 @@ specifiers:
   fastify: 4.5.3
   fastify-cli: 5.3.0
   fastify-plugin: 4.2.1
-  fluent-json-schema: 3.1.0
+  fluent-json-schema: 4.2.1
   lightrun: 1.7.0
   spotify-web-api-node: 5.0.2
   tap: 16.3.0
@@ -35,7 +35,7 @@ dependencies:
   fastify: 4.5.3
   fastify-cli: 5.3.0
   fastify-plugin: 4.2.1
-  fluent-json-schema: 3.1.0
+  fluent-json-schema: 4.2.1
   lightrun: 1.7.0
   spotify-web-api-node: 5.0.2
 
@@ -835,11 +835,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /deepmerge/4.2.2:
-    resolution: {integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==}
-    engines: {node: '>=0.10.0'}
-    dev: false
-
   /default-require-extensions/3.0.0:
     resolution: {integrity: sha512-ek6DpXq/SCpvjhpFsLFRVtIxJCRw6fUR42lYMVZuUMK7n8eMz4Uh5clckdBjEpLhn/gEBZo7hDJnJcwdKLKQjg==}
     engines: {node: '>=8'}
@@ -1109,11 +1104,10 @@ packages:
     engines: {node: '>=0.8.22'}
     dev: false
 
-  /fluent-json-schema/3.1.0:
-    resolution: {integrity: sha512-Ft7WGihiwpcZkZsJuXVCcEHLDOJ1vGS4wFK8V08xWffFthadgjwpSExfBWz/72VxHZ0xe7/N3T38hOxskwxd3A==}
-    engines: {node: '>=12'}
+  /fluent-json-schema/4.2.1:
+    resolution: {integrity: sha512-vSvURY8BBRqxOFquy/wwjdnT4z07j2NZ+Cm3Nj881NHXKPSdiE4ZNyRImDh+SIk2yFZKzj7Clt+ENb5ha4uYJA==}
     dependencies:
-      deepmerge: 4.2.2
+      '@fastify/deepmerge': 1.1.0
     dev: false
 
   /fn.name/1.1.0:

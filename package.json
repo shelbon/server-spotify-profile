@@ -30,7 +30,7 @@
     "fastify": "4.5.3",
     "fastify-cli": "5.3.0",
     "fastify-plugin": "4.2.1",
-    "fluent-json-schema": "3.1.0",
+    "fluent-json-schema": "4.2.1",
     "lightrun": "1.7.0",
     "spotify-web-api-node": "5.0.2"
   },
