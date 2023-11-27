@@ -22,7 +22,7 @@
     "@fastify/env": "4.1.0",
     "@fastify/helmet": "9.1.0",
     "@fastify/sensible": "5.1.1",
-    "@fastify/session": "9.0.0",
+    "@fastify/session": "10.6.1",
     "close-with-grace": "1.1.0",
     "connect-redis": "6.1.3",
     "desm": "1.3.0",
