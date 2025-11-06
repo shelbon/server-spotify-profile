@@ -1,16 +1,16 @@
 import SpotifyWebApi from 'spotify-web-api-node';
 import { generateRandomString } from '../utils.js';
 
-export default async function (fastify, opts) {
+export default async function(fastify, opts) {
   const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     redirectUri: process.env.REDIRECT_URI,
   });
-  
+
   fastify.get(
     '/spotify/login/',
-    function (req, res) {
+    function(req, res) {
       const scope = process.env.SCOPE.split(' ');
       const state = generateRandomString(16);
 
@@ -20,7 +20,7 @@ export default async function (fastify, opts) {
     }
   );
   // Ask the api the access_token and refresh_token
-  fastify.get('/spotify/login/callback/', function (req, res) {
+  fastify.get('/spotify/login/callback/', function(req, res) {
     let { code, state } = req.query;
     const storedState = req.cookies ? req.cookies.spotify_auth_state : null;
 
@@ -34,9 +34,9 @@ export default async function (fastify, opts) {
       res.clearCookie(process.env.STATE_KEY);
       spotifyApi
         .authorizationCodeGrant(code)
-        .then(function (data) {
+        .then(function(data) {
           res.redirect(
-            `${process.env.FRONTEND_URI}#${new URLSearchParams({
+            `${process.env.FRONTEND_URI}/auth/callback?${new URLSearchParams({
               access_token: data.body.access_token,
               refresh_token: data.body.refresh_token,
             }).toString()}`
