@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fastify/autoload': 5.2.0
-  '@fastify/cookie': 8.1.0
+  '@fastify/cookie': 8.3.0
   '@fastify/cors': 8.1.0
   '@fastify/env': 4.1.0
   '@fastify/helmet': 9.1.0
@@ -22,7 +22,7 @@ specifiers:
 
 dependencies:
   '@fastify/autoload': 5.2.0
-  '@fastify/cookie': 8.1.0
+  '@fastify/cookie': 8.3.0
   '@fastify/cors': 8.1.0
   '@fastify/env': 4.1.0
   '@fastify/helmet': 9.1.0
@@ -272,8 +272,8 @@ packages:
       pkg-up: 3.1.0
     dev: false
 
-  /@fastify/cookie/8.1.0:
-    resolution: {integrity: sha512-+BxpyK4KLAjDpXdWxOjl8yaKtAoqYZR+CE9+cNtdMDoACb8hcpGx9npkrdINl62EpCu06oIPluq8A4NUsi78ZA==}
+  /@fastify/cookie/8.3.0:
+    resolution: {integrity: sha512-P9hY9GO11L20TnZ33XN3i0bt+3x0zaT7S0ohAzWO950E9PB2xnNhLYzPFJIGFi5AVN0yr5+/iZhWxeYvR6KCzg==}
     dependencies:
       cookie: 0.5.0
       fastify-plugin: 4.2.1
