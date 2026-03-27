@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@fastify/autoload': 5.2.0
   '@fastify/cookie': 8.1.0
-  '@fastify/cors': 8.1.0
+  '@fastify/cors': 8.5.0
   '@fastify/env': 4.1.0
   '@fastify/helmet': 9.1.0
   '@fastify/sensible': 5.1.1
@@ -23,7 +23,7 @@ specifiers:
 dependencies:
   '@fastify/autoload': 5.2.0
   '@fastify/cookie': 8.1.0
-  '@fastify/cors': 8.1.0
+  '@fastify/cors': 8.5.0
   '@fastify/env': 4.1.0
   '@fastify/helmet': 9.1.0
   '@fastify/sensible': 5.1.1
@@ -279,11 +279,11 @@ packages:
       fastify-plugin: 4.2.1
     dev: false
 
-  /@fastify/cors/8.1.0:
-    resolution: {integrity: sha512-1OmjwyxQZ8GePxa5t1Rpsn2qS56+1ouKMvZufpgJWhXtoCeM/ffA+PsNW8pyslPr4W0E27gVoFqtvHwhXW1U2w==}
+  /@fastify/cors/8.5.0:
+    resolution: {integrity: sha512-/oZ1QSb02XjP0IK1U0IXktEsw/dUBTxJOW7IpIeO8c/tNalw/KjoNSJv1Sf6eqoBPO+TDGkifq6ynFK3v68HFQ==}
     dependencies:
       fastify-plugin: 4.2.1
-      mnemonist: 0.39.2
+      mnemonist: 0.39.6
     dev: false
 
   /@fastify/deepmerge/1.1.0:
@@ -1799,8 +1799,8 @@ packages:
     hasBin: true
     dev: true
 
-  /mnemonist/0.39.2:
-    resolution: {integrity: sha512-n3ZCEosuMH03DVivZ9N0fcXPWiZrBLEdfSlEJ+S/mJxmk3zuo1ur0dj9URDczFyP1VS3wfiyKzqLLDXoPJ6rPA==}
+  /mnemonist/0.39.6:
+    resolution: {integrity: sha512-A/0v5Z59y63US00cRSLiloEIw3t5G+MiKz4BhX21FI+YBJXBOGW0ohFxTxO08dsOYlzxo87T7vGfZKYp2bcAWA==}
     dependencies:
       obliterator: 2.0.4
     dev: false
